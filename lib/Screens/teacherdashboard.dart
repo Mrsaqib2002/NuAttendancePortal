@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nuattendanceportal/Screens/Loginscreen.dart';
+import 'package:nuattendanceportal/Screens/NewLoginScreen.dart';
 
 class teacherdashboard extends StatelessWidget {
   const teacherdashboard({super.key});
@@ -7,13 +7,18 @@ class teacherdashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("Teacher Dashboard", style: TextStyle(
+        fontSize: 32,
+        color: Colors.green,
+        fontWeight: FontWeight.bold,),),),
       backgroundColor: Colors.white,
       body: Column (
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          
           InkWell(
           onTap: (){Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context)=>Loginscreen()));
+              MaterialPageRoute(builder: (context)=>NewLoginScreen()));
             },
             child: Container(
               height: 55,width: 380,
